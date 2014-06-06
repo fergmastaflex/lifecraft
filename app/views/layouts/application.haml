@@ -1,0 +1,12 @@
+!!!
+%html{lang: en}
+  %head
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+
+  %body
+    %title= content_for?(:title) ? yield(:title) : "foundation-rails"
+
+    = yield
+    = javascript_include_tag "application"

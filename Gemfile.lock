@@ -50,6 +50,9 @@ GEM
     execjs (2.2.0)
     ffi (1.9.3)
     formatador (0.2.5)
+    foundation-rails (5.2.3.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     growl (1.0.3)
     guard (2.6.1)
       formatador (>= 0.2.4)
@@ -193,6 +196,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
+  foundation-rails
   growl
   guard-rspec
   haml-rails
