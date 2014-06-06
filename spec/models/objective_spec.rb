@@ -14,11 +14,11 @@ describe Objective do
 		FactoryGirl.build(:objective, description: nil).should_not be_valid
 	end
 
-	it 'is invalid without a start_time' do
+	it 'is invalid without a start_date' do
 		FactoryGirl.build(:objective, start_date: nil).should_not be_valid
 	end
 
-	it 'is invalid without an end_time' do
+	it 'is invalid without an end_date' do
 		FactoryGirl.build(:objective, end_date: nil).should_not be_valid
 	end
 
