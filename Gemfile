@@ -1,50 +1,34 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.5'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-gem 'i18n', '0.6.9'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-gem 'haml-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
-gem 'rspec-rails', '~> 3.0.0'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+group :development, :test do
+  gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'guard-rspec'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'growl'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'haml-rails'
+gem 'i18n', '0.6.9'
+gem 'sass-rails', '~> 4.0.0'
+gem 'uglifier'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks',
+gem 'jbuilder', '~> 1.2'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :doc do
+  gem 'sdoc', '0.3.20', require: false
+end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
