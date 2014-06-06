@@ -7,5 +7,10 @@ describe CampaignsController do
     response.should render_template(:index)
   end
 
+  it 'loads new page' do
+    get :new
+    response.should render_template(:new)
+  end
+
 end
 
