@@ -3,7 +3,8 @@ class CreateObjectives < ActiveRecord::Migration
     create_table :objectives do |t|
     	t.string :name
     	t.string :directive
-    	t.datetime :expiration_date
+    	t.datetime :start_date
+    	t.datetime :end_date
 
       t.timestamps
     end
