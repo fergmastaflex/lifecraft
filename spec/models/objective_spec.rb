@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ObjectiveTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+	
+	subject { assigns("objective") }
+	it { should be_valid }
 end
