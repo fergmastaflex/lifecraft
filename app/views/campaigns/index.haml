@@ -1,1 +1,7 @@
 %h1 campaigns!
+
+-@campaigns.each do |c|
+  %h3 title
+  -c.title
+  %h3 description
+  -c.description
