@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe CampaignsController, :type => :controller do
+describe CampaignsController do 
+
+  it 'loads index page' do
+    get :index
+    response.should render_template(:index)
+  end
 
 end
+
