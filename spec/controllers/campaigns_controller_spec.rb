@@ -22,7 +22,7 @@ describe CampaignsController do
   end
 
   it 'redirect after save' do
-    @campaign.save
+    post :create, campaign: @campaign
     response.should redirect_to campaigns_path
   end
 end
