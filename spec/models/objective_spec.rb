@@ -2,14 +2,10 @@ require 'spec_helper'
 
 describe Objective do
 
-	context 'Objective creation' do
+	context 'objective creation' do
 
 		it 'should be invalid without all the required attributes' do
 			Objective.new().should_not be_valid
-		end
-
-		it 'should be invalid if the name is empty' do
-			Objective.new(name: "").should_not be_valid
 		end
 
 		context 'with assigned attributes' do
