@@ -23,7 +23,22 @@ describe Objective do
 			end
 
 			it 'should be invalid with a missing name' do
-				@objective.name = ''
+				@objective.name = nil
+				@objective.should_not be_valid
+			end
+
+			it 'should be invalid with a missing directive' do
+				@objective.directive = nil
+				@objective.should_not be_valid
+			end
+
+			it 'should be invalid with a missing start_date' do
+				@objective.start_date = nil
+				@objective.should_not be_valid
+			end
+
+			it 'should be invalid with a missing end_date' do
+				@objective.end_date = nil
 				@objective.should_not be_valid
 			end
 
