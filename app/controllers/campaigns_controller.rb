@@ -4,6 +4,6 @@ class CampaignsController < ApplicationController
   end
 
   def new
-    @campiagn = Campaign.new
+    @campaign = Campaign.new
   end
 end
