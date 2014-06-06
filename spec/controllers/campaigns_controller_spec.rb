@@ -28,7 +28,8 @@ describe CampaignsController do
   end
 
   it 'renders new if fail' do
-    Campaign.any_instance.stub(:valid?).and_return false
+    #Campaign.any_instance.stub(:valid?).and_return false
+    #allow_any_instance_of(Campaign).stub(:valid?).and_return false
     post :create, campaign: {foo: 'bar'}
     response.should render_template(:new)
   end
