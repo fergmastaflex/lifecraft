@@ -5,11 +5,12 @@ class CampaignsController < ApplicationController
 
   def new
     @campaign = Campaign.new
+    binding.pry
   end
 
   def create
     
-    @campaign = Campaign.new(filtered params )
+    @campaign = Campaign.new(campaign_params)
 
     if @campaign.save
       redirect_to campaigns_path, notice: "Your campaign was created"
@@ -20,8 +21,7 @@ class CampaignsController < ApplicationController
 
   private
 
-  def filtered(params)
-    binding.pry
+  def campaign_params
     params.require(:campaign).permit(
         :id, :title, :description
       )

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe CampaignsController do 
   before(:each) do
+    campaign = {}
     @new_campaign = Campaign.new
     @campaign = double(Campaign)
   end
@@ -27,9 +28,8 @@ describe CampaignsController do
   end
 
   it 'renders new if fail' do
-    @campaign.stub(:save).and_return(false)
-    post :create, campaign: {}
-    controller.instance_variable_get(:campaign)
+    Campaign.any_instance.stub(:valid?).and_return false
+    post :create, campaign: {foo: 'bar'}
     response.should render_template(:new)
   end
 end
